@@ -45,9 +45,11 @@ router.patch('/users/:id', async (req, res) => {
     }
     const _id = req.params.id;
     try {
+        // $set update operator(mongodb native driver) 
+        // not used here because mongoose dirver automatically does for that
         const user = await User.findByIdAndUpdate(_id, req.body, {
-            new: true,
-            runValidators: true
+            new: true, // return updated value
+            runValidators: true // do run validation on updates
         });
         if (!user) {
             return res.status(404).send()

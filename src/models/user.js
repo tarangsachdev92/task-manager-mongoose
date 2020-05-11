@@ -10,7 +10,7 @@ const User = mongoose.model('User', {
     password: {
         type: String,
         required: true,
-        minlength: 7,
+        // minlength: 7,
         trim: true,
         validate(value) {
             if (value.length < 7) {

@@ -6,7 +6,7 @@ const Task = require('../src/models/task');
 
 //5e53ab65acdfa81cd35fb255
 
-//$set update operator(mongodb native driver) 
+// $set update operator(mongodb native driver) 
 // not used here because mongoose dirver automatically does for that
 // User.findByIdAndUpdate('5e4fc103b124250fbcf1ad59', { age: 1 }).then((user) => {
 //     console.log(user);
@@ -39,7 +39,6 @@ const deleteTaskAndCount = async (id) => {
 }
 
 // 5e53ae2b5c37ec2010efb716
-
 deleteTaskAndCount('5e53ae2b5c37ec2010efb716').then(count => {
     console.log(count);
 }).catch(e => {
